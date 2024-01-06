@@ -1,18 +1,25 @@
-## Getting Started
+## Memulai
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Jika Anda menggunakan VS Code tinggal clone saja repository ini ke lokal folder di komputer Anda
 
-## Folder Structure
+Jika Anda menggunakan Apache Netbeans bisa melakukan copas manual untuk `folder` dan `file *.java` yang ada di folder `src`
 
-The workspace contains two folders by default, where:
+> Jika Anda menggunakan Apache Neatbeans tidak usah menghiraukan folder `bin` dan `lib`
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Syarat Untuk VS Code
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Download dan Install Java
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+[Download Java](https://www.java.com/en/download/)
 
-## Dependency Management
+Download dan Install Java SE
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+[Download Java SE](https://www.oracle.com/java/technologies/downloads)
+
+Install `Extension Pack for Java` di extension VS Code
+
+## Manual
+
+Semuanya di mualai dari `src/menu/Main.java`
+
+> Jika ingin mengisi data palsu untuk testing silahkan matikan _comment_ dari method `itemInit()` yang ada di file `src/menu/Main.java` dan inisialisasinya di method `main`

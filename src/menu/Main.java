@@ -9,38 +9,44 @@ import person.Peminjam;
 import java.util.Scanner;
 
 public class Main {
-    public static void itemInit(Perpustakaan perpustakaan) {
-        // Data untuk Buku
-        Buku buku1 = new Buku();
-        buku1.setBuku("Pemrograman Java", "Elexmedia Komputindo", 2019, "978-602-02-9886-1", "Abdul Kadir");
+    // public static void itemInit(Perpustakaan perpustakaan) {
+    // // Data untuk Buku
+    // Buku buku1 = new Buku();
+    // buku1.setBuku("Pemrograman Java", "Elexmedia Komputindo", 2019,
+    // "978-602-02-9886-1", "Abdul Kadir");
 
-        Buku buku2 = new Buku();
-        buku2.setBuku("Clean Code", "Prentice Hall", 2008, "978-0-13-235088-4", "Robert C. Martin");
+    // Buku buku2 = new Buku();
+    // buku2.setBuku("Clean Code", "Prentice Hall", 2008, "978-0-13-235088-4",
+    // "Robert C. Martin");
 
-        // Data untuk Komik
-        Komik komik1 = new Komik();
-        komik1.setKomik("One Piece", "Shueisha", 1997, "978-4-08-873621-1", "Eiichiro Oda", "Eiichiro Oda",
-                "Petualangan");
+    // // Data untuk Komik
+    // Komik komik1 = new Komik();
+    // komik1.setKomik("One Piece", "Shueisha", 1997, "978-4-08-873621-1", "Eiichiro
+    // Oda", "Eiichiro Oda",
+    // "Petualangan");
 
-        Komik komik2 = new Komik();
-        komik2.setKomik("Naruto", "Shueisha", 1999, "978-4-08-874247-2", "Masashi Kishimoto", "Masashi Kishimoto",
-                "Ninja");
+    // Komik komik2 = new Komik();
+    // komik2.setKomik("Naruto", "Shueisha", 1999, "978-4-08-874247-2", "Masashi
+    // Kishimoto", "Masashi Kishimoto",
+    // "Ninja");
 
-        // Data untuk Majalah
-        Majalah majalah1 = new Majalah();
-        majalah1.setMajalah("Bobo", "PT. Gramedia Majalah", 2019, "977-0216-14-7001", "Edisi 01/2019", "Anak-anak");
+    // // Data untuk Majalah
+    // Majalah majalah1 = new Majalah();
+    // majalah1.setMajalah("Bobo", "PT. Gramedia Majalah", 2019, "977-0216-14-7001",
+    // "Edisi 01/2019", "Anak-anak");
 
-        Majalah majalah2 = new Majalah();
-        majalah2.setMajalah("National Geographic", "National Geographic Society", 1888, "NGM-1888-01", "Vol. 1 No. 1",
-                "Ilmu Pengetahuan");
+    // Majalah majalah2 = new Majalah();
+    // majalah2.setMajalah("National Geographic", "National Geographic Society",
+    // 1888, "NGM-1888-01", "Vol. 1 No. 1",
+    // "Ilmu Pengetahuan");
 
-        perpustakaan.tambahItem(buku1);
-        perpustakaan.tambahItem(buku2);
-        perpustakaan.tambahItem(komik1);
-        perpustakaan.tambahItem(komik2);
-        perpustakaan.tambahItem(majalah1);
-        perpustakaan.tambahItem(majalah2);
-    }
+    // perpustakaan.tambahItem(buku1);
+    // perpustakaan.tambahItem(buku2);
+    // perpustakaan.tambahItem(komik1);
+    // perpustakaan.tambahItem(komik2);
+    // perpustakaan.tambahItem(majalah1);
+    // perpustakaan.tambahItem(majalah2);
+    // }
 
     public static void main(String[] args) {
         // membersihkan layar console
@@ -50,7 +56,7 @@ public class Main {
         Perpustakaan perpustakaan = new Perpustakaan();
         Scanner input = new Scanner(System.in);
 
-        itemInit(perpustakaan);
+        // itemInit(perpustakaan);
 
         boolean exit = false;
         do {
