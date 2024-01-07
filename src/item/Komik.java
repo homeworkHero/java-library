@@ -14,30 +14,6 @@ public class Komik extends Item {
         this.genre = genre;
     }
 
-    // public String getPengarang() {
-    // return pengarang;
-    // }
-
-    // public void setPengarang(String pengarang) {
-    // this.pengarang = pengarang;
-    // }
-
-    // public String getIllustrator() {
-    // return illustrator;
-    // }
-
-    // public void setIllustrator(String illustrator) {
-    // this.illustrator = illustrator;
-    // }
-
-    // public String getGenre() {
-    // return genre;
-    // }
-
-    // public void setGenre(String genre) {
-    // this.genre = genre;
-    // }
-
     @Override
     public String cetak() {
         return "ISBN \t\t: " + super.getUniqueKey() + "\n" + super.cetak() + "Pengarang \t: " + pengarang + "\n"

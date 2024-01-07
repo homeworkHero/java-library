@@ -11,37 +11,9 @@ public class Person {
         this.unique_key = unique_key;
     }
 
-    // public String getNama() {
-    // return nama;
-    // }
-
-    // public void setNama(String nama) {
-    // this.nama = nama;
-    // }
-
-    // public void setEmail(String email) {
-    // this.email = email;
-    // }
-
-    // public String getEmail() {
-    // return this.email;
-    // }
-
-    // public int getTelepon() {
-    // return telepon;
-    // }
-
-    // public void setTelepon(int telepon) {
-    // this.telepon = telepon;
-    // }
-
     public String getUniqueKey() {
         return unique_key;
     }
-
-    // public void setUniqueKey(String unique_key) {
-    // this.unique_key = unique_key;
-    // }
 
     public String cetak() {
         return "Nama \t\t\t: " + nama + "\n" +

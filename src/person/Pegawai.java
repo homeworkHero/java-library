@@ -15,22 +15,6 @@ public class Pegawai extends Person {
         this.tannggal_mulai_kerja = tannggal_mulai_kerja;
     }
 
-    // public int getRekening() {
-    // return rekening;
-    // }
-
-    // public void setRekening(int rekening) {
-    // this.rekening = rekening;
-    // }
-
-    // public String getTannggal_mulai_kerja() {
-    // return tannggal_mulai_kerja;
-    // }
-
-    // public void setTannggal_mulai_kerja(String tannggal_mulai_kerja) {
-    // this.tannggal_mulai_kerja = tannggal_mulai_kerja;
-    // }
-
     @Override
     public String cetak() {
         return "NIP \t\t\t: " + super.getUniqueKey() + "\n" + super.cetak() + "Rekening \t\t: " + rekening + "\n"

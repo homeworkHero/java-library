@@ -11,14 +11,6 @@ public class Buku extends Item {
         this.pengarang = pengarang;
     }
 
-    // public String getPengarang() {
-    // return pengarang;
-    // }
-
-    // public void setPengarang(String pengarang) {
-    // this.pengarang = pengarang;
-    // }
-
     @Override
     public String cetak() {
         return "ISBN \t\t: " + super.getUniqueKey() + "\n" + super.cetak() + "Pengarang \t: " + pengarang

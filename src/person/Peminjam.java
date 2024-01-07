@@ -16,38 +16,6 @@ public class Peminjam extends Person {
         this.yang_dipinjam = yang_dipinjam;
     }
 
-    // public String getAlamat() {
-    // return alamat;
-    // }
-
-    // public void setAlamat(String alamat) {
-    // this.alamat = alamat;
-    // }
-
-    // public void setTanggal_meminjam(String tanggal_meminjam) {
-    // this.tanggal_meminjam = tanggal_meminjam;
-    // }
-
-    // public String getTanggal_meminjam() {
-    // return this.tanggal_meminjam;
-    // }
-
-    // public void setBatas_pengembalian(String batas_pengembalian) {
-    // this.batas_pengembalian = batas_pengembalian;
-    // }
-
-    // public String getBatas_pengembalian() {
-    // return this.batas_pengembalian;
-    // }
-
-    // public void setYang_dipinjam(String yang_dipinjam) {
-    // this.yang_dipinjam = yang_dipinjam;
-    // }
-
-    // public String getYang_dipinjam() {
-    // return this.yang_dipinjam;
-    // }
-
     @Override
     public String cetak() {
         return "No Peminjam \t\t: " + super.getUniqueKey() + "\n" + super.cetak() + "Alamat \t\t\t: " + alamat + "\n"

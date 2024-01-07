@@ -15,33 +15,9 @@ public class Item {
         return judul;
     }
 
-    // public void setJudul(String judul) {
-    // this.judul = judul;
-    // }
-
-    // public String getPenerbit() {
-    // return penerbit;
-    // }
-
-    // public void setPenerbit(String penerbit) {
-    // this.penerbit = penerbit;
-    // }
-
-    // public int getTahunTerbit() {
-    // return tahunTerbit;
-    // }
-
-    // public void setTahunTerbit(int tahunTerbit) {
-    // this.tahunTerbit = tahunTerbit;
-    // }
-
     public String getUniqueKey() {
         return uniqueKey;
     }
-
-    // public void setUniqueKey(String uniqueKey) {
-    // this.uniqueKey = uniqueKey;
-    // }
 
     public String cetak() {
         return "Judul \t\t: " + judul + "\n" +

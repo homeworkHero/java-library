@@ -13,22 +13,6 @@ public class Majalah extends Item {
         this.tema = tema;
     }
 
-    // public String getEdisi() {
-    // return edisi;
-    // }
-
-    // public void setEdisi(String edisi) {
-    // this.edisi = edisi;
-    // }
-
-    // public String getTema() {
-    // return tema;
-    // }
-
-    // public void setTema(String tema) {
-    // this.tema = tema;
-    // }
-
     @Override
     public String cetak() {
         return "ISSN \t\t: " + super.getUniqueKey() + "\n" + super.cetak() + "Edisi \t\t: " + edisi + "\n"
