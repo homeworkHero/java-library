@@ -61,6 +61,13 @@ public class Perpustakaan {
     }
 
     public void hapusItem(String uniqueKey) {
+        // for(Item item : daftarItem) {
+        // if(item.getUniqueKey().equals(uniqueKey)) {
+        // daftarItem.remove(item);
+        // break;
+        // }
+        // }
+
         daftarItem.removeIf(item -> item.getUniqueKey().equals(uniqueKey));
         System.out.print("\nItem berhasil dihapus.");
         scanner.nextLine();

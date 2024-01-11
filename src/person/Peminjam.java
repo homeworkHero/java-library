@@ -41,30 +41,42 @@ public class Peminjam extends Person {
             System.out.println("3. Hapus Peminjam");
             System.out.println("4. Kembali");
 
-            System.out.print("\nPilih menu: ");
-            pilihan = input.nextInt();
-            input.nextLine();
+            try {
+                System.out.print("\nPilih menu: ");
+                pilihan = input.nextInt();
+                input.nextLine();
+            } catch (Exception e) {
+                System.out.println("Inputan tidak valid.");
+                input.nextLine();
+                continue;
+            }
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("==================TAMBAH PEMINJAM==================\n");
-                    System.out.print("Nama \t\t\t: ");
-                    nama = input.nextLine();
-                    System.out.print("Email \t\t\t: ");
-                    email = input.nextLine();
-                    System.out.print("Telepon \t\t: ");
-                    telepon = input.nextInt();
-                    input.nextLine();
-                    System.out.print("No Peminjam \t\t: ");
-                    no_peminjam = input.nextLine();
-                    System.out.print("Alamat \t\t\t: ");
-                    alamat = input.nextLine();
-                    System.out.print("Tanggal Meminjam \t: ");
-                    tanggal_meminjam = input.nextLine();
-                    System.out.print("Batas Pengembalian \t: ");
-                    batas_pengembalian = input.nextLine();
-                    System.out.print("Yang Dipinjam \t\t: ");
-                    yang_dipinjam = input.nextLine();
+                    try {
+                        System.out.println("==================TAMBAH PEMINJAM==================\n");
+                        System.out.print("Nama \t\t\t: ");
+                        nama = input.nextLine();
+                        System.out.print("Email \t\t\t: ");
+                        email = input.nextLine();
+                        System.out.print("Telepon \t\t: ");
+                        telepon = input.nextInt();
+                        input.nextLine();
+                        System.out.print("No Peminjam \t\t: ");
+                        no_peminjam = input.nextLine();
+                        System.out.print("Alamat \t\t\t: ");
+                        alamat = input.nextLine();
+                        System.out.print("Tanggal Meminjam \t: ");
+                        tanggal_meminjam = input.nextLine();
+                        System.out.print("Batas Pengembalian \t: ");
+                        batas_pengembalian = input.nextLine();
+                        System.out.print("Yang Dipinjam \t\t: ");
+                        yang_dipinjam = input.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Inputan tidak valid.");
+                        input.nextLine();
+                        break;
+                    }
 
                     peminjam.setPeminjam(nama, email, telepon, no_peminjam, alamat, tanggal_meminjam,
                             batas_pengembalian, yang_dipinjam);

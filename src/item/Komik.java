@@ -40,28 +40,40 @@ public class Komik extends Item {
             System.out.println("5. Cari Komik");
             System.out.println("6. Kembali");
 
-            System.out.print("\nPilih menu: ");
-            pilihan = input.nextInt();
-            input.nextLine();
+            try {
+                System.out.print("\nPilih menu: ");
+                pilihan = input.nextInt();
+                input.nextLine();
+            } catch (Exception e) {
+                System.out.println("Inputan tidak valid.");
+                input.nextLine();
+                continue;
+            }
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("==================TAMBAH KOMIK==================");
-                    System.out.print("ISBN \t\t: ");
-                    isbn = input.nextLine();
-                    System.out.print("Judul \t\t: ");
-                    judul = input.nextLine();
-                    System.out.print("Penerbit \t: ");
-                    penerbit = input.nextLine();
-                    System.out.print("Tahun Terbit \t: ");
-                    tahunTerbit = input.nextInt();
-                    input.nextLine();
-                    System.out.print("Pengarang \t: ");
-                    pengarang = input.nextLine();
-                    System.out.print("Illustrator \t: ");
-                    illustrator = input.nextLine();
-                    System.out.print("Genre \t\t: ");
-                    genre = input.nextLine();
+                    try {
+                        System.out.println("==================TAMBAH KOMIK==================");
+                        System.out.print("ISBN \t\t: ");
+                        isbn = input.nextLine();
+                        System.out.print("Judul \t\t: ");
+                        judul = input.nextLine();
+                        System.out.print("Penerbit \t: ");
+                        penerbit = input.nextLine();
+                        System.out.print("Tahun Terbit \t: ");
+                        tahunTerbit = input.nextInt();
+                        input.nextLine();
+                        System.out.print("Pengarang \t: ");
+                        pengarang = input.nextLine();
+                        System.out.print("Illustrator \t: ");
+                        illustrator = input.nextLine();
+                        System.out.print("Genre \t\t: ");
+                        genre = input.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Inputan tidak valid.");
+                        input.nextLine();
+                        break;
+                    }
 
                     if (!perpustakaan.checkUniqueKey(isbn, "Komik")) {
                         komik.setKomik(judul, penerbit, tahunTerbit, isbn, pengarang, illustrator, genre);
@@ -82,19 +94,25 @@ public class Komik extends Item {
                     isbn = input.nextLine();
 
                     if (perpustakaan.checkUniqueKey(isbn, "Komik")) {
-                        System.out.print("\nJudul \t\t: ");
-                        judul = input.nextLine();
-                        System.out.print("Penerbit \t: ");
-                        penerbit = input.nextLine();
-                        System.out.print("Tahun Terbit \t: ");
-                        tahunTerbit = input.nextInt();
-                        input.nextLine();
-                        System.out.print("Pengarang \t: ");
-                        pengarang = input.nextLine();
-                        System.out.print("Illustrator \t: ");
-                        illustrator = input.nextLine();
-                        System.out.print("Genre \t\t: ");
-                        genre = input.nextLine();
+                        try {
+                            System.out.print("\nJudul \t\t: ");
+                            judul = input.nextLine();
+                            System.out.print("Penerbit \t: ");
+                            penerbit = input.nextLine();
+                            System.out.print("Tahun Terbit \t: ");
+                            tahunTerbit = input.nextInt();
+                            input.nextLine();
+                            System.out.print("Pengarang \t: ");
+                            pengarang = input.nextLine();
+                            System.out.print("Illustrator \t: ");
+                            illustrator = input.nextLine();
+                            System.out.print("Genre \t\t: ");
+                            genre = input.nextLine();
+                        } catch (Exception e) {
+                            System.out.println("Inputan tidak valid.");
+                            input.nextLine();
+                            break;
+                        }
 
                         komik.setKomik(judul, penerbit, tahunTerbit, isbn, pengarang, illustrator, genre);
                         perpustakaan.updateItem(isbn, komik);

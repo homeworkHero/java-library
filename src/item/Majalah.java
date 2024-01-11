@@ -39,26 +39,38 @@ public class Majalah extends Item {
             System.out.println("5. Cari Majalah");
             System.out.println("6. Kembali");
 
-            System.out.print("\nPilih menu: ");
-            pilihan = input.nextInt();
-            input.nextLine();
+            try {
+                System.out.print("\nPilih menu: ");
+                pilihan = input.nextInt();
+                input.nextLine();
+            } catch (Exception e) {
+                System.out.println("Inputan tidak valid.");
+                input.nextLine();
+                continue;
+            }
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("==================TAMBAH MAJALAH==================");
-                    System.out.print("ISSN \t\t: ");
-                    issn = input.nextLine();
-                    System.out.print("Judul \t\t: ");
-                    judul = input.nextLine();
-                    System.out.print("Penerbit \t: ");
-                    penerbit = input.nextLine();
-                    System.out.print("Tahun Terbit \t: ");
-                    tahunTerbit = input.nextInt();
-                    input.nextLine();
-                    System.out.print("Edisi \t\t: ");
-                    edisi = input.nextLine();
-                    System.out.print("Tema \t\t: ");
-                    tema = input.nextLine();
+                    try {
+                        System.out.println("==================TAMBAH MAJALAH==================");
+                        System.out.print("ISSN \t\t: ");
+                        issn = input.nextLine();
+                        System.out.print("Judul \t\t: ");
+                        judul = input.nextLine();
+                        System.out.print("Penerbit \t: ");
+                        penerbit = input.nextLine();
+                        System.out.print("Tahun Terbit \t: ");
+                        tahunTerbit = input.nextInt();
+                        input.nextLine();
+                        System.out.print("Edisi \t\t: ");
+                        edisi = input.nextLine();
+                        System.out.print("Tema \t\t: ");
+                        tema = input.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Inputan tidak valid.");
+                        input.nextLine();
+                        break;
+                    }
 
                     if (!perpustakaan.checkUniqueKey(issn, "Majalah")) {
                         majalah.setMajalah(judul, penerbit, tahunTerbit, issn, edisi, tema);
@@ -79,17 +91,23 @@ public class Majalah extends Item {
                     issn = input.nextLine();
 
                     if (perpustakaan.checkUniqueKey(issn, "Majalah")) {
-                        System.out.print("\nJudul \t\t: ");
-                        judul = input.nextLine();
-                        System.out.print("Penerbit \t: ");
-                        penerbit = input.nextLine();
-                        System.out.print("Tahun Terbit \t: ");
-                        tahunTerbit = input.nextInt();
-                        input.nextLine();
-                        System.out.print("Edisi \t\t: ");
-                        edisi = input.nextLine();
-                        System.out.print("Tema \t\t: ");
-                        tema = input.nextLine();
+                        try {
+                            System.out.print("\nJudul \t\t: ");
+                            judul = input.nextLine();
+                            System.out.print("Penerbit \t: ");
+                            penerbit = input.nextLine();
+                            System.out.print("Tahun Terbit \t: ");
+                            tahunTerbit = input.nextInt();
+                            input.nextLine();
+                            System.out.print("Edisi \t\t: ");
+                            edisi = input.nextLine();
+                            System.out.print("Tema \t\t: ");
+                            tema = input.nextLine();
+                        } catch (Exception e) {
+                            System.out.println("Inputan tidak valid.");
+                            input.nextLine();
+                            break;
+                        }
 
                         majalah.setMajalah(judul, penerbit, tahunTerbit, issn, edisi, tema);
                         perpustakaan.updateItem(issn, majalah);

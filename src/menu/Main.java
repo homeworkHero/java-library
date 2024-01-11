@@ -55,6 +55,7 @@ public class Main {
 
         Perpustakaan perpustakaan = new Perpustakaan();
         Scanner input = new Scanner(System.in);
+        int pilihan;
 
         // itemInit(perpustakaan);
 
@@ -75,8 +76,14 @@ public class Main {
             System.out.println("7. Menu Peminjam");
             System.out.println("8. Keluar");
 
-            System.out.print("\nPilih menu: ");
-            int pilihan = input.nextInt();
+            try {
+                System.out.print("\nPilih menu: ");
+                pilihan = input.nextInt();
+            } catch (Exception e) {
+                System.out.println("Inputan tidak valid.");
+                input.nextLine();
+                continue;
+            }
 
             switch (pilihan) {
                 case 1:

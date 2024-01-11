@@ -39,27 +39,39 @@ public class Pegawai extends Person {
             System.out.println("3. Hapus Pegawai");
             System.out.println("4. Kembali");
 
-            System.out.print("\nPilih menu: ");
-            pilihan = input.nextInt();
-            input.nextLine();
+            try {
+                System.out.print("\nPilih menu: ");
+                pilihan = input.nextInt();
+                input.nextLine();
+            } catch (Exception e) {
+                System.out.println("Inputan tidak valid.");
+                input.nextLine();
+                continue;
+            }
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("==================TAMBAH PEGAWAI==================\n");
-                    System.out.print("Nama \t\t\t: ");
-                    nama = input.nextLine();
-                    System.out.print("Email \t\t\t: ");
-                    email = input.nextLine();
-                    System.out.print("Telepon \t\t: ");
-                    telepon = input.nextInt();
-                    input.nextLine();
-                    System.out.print("NIP \t\t\t: ");
-                    nip = input.nextLine();
-                    System.out.print("Rekening \t\t: ");
-                    rekening = input.nextInt();
-                    input.nextLine();
-                    System.out.print("Tanggal Mulai Kerja \t: ");
-                    tannggal_mulai_kerja = input.nextLine();
+                    try {
+                        System.out.println("==================TAMBAH PEGAWAI==================\n");
+                        System.out.print("Nama \t\t\t: ");
+                        nama = input.nextLine();
+                        System.out.print("Email \t\t\t: ");
+                        email = input.nextLine();
+                        System.out.print("Telepon \t\t: ");
+                        telepon = input.nextInt();
+                        input.nextLine();
+                        System.out.print("NIP \t\t\t: ");
+                        nip = input.nextLine();
+                        System.out.print("Rekening \t\t: ");
+                        rekening = input.nextInt();
+                        input.nextLine();
+                        System.out.print("Tanggal Mulai Kerja \t: ");
+                        tannggal_mulai_kerja = input.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Inputan tidak valid.");
+                        input.nextLine();
+                        break;
+                    }
 
                     pegawai.setPegawai(nama, email, telepon, nip, rekening, tannggal_mulai_kerja);
                     perpustakaan.tambahPerson(pegawai);

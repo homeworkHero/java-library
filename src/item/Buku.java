@@ -43,18 +43,24 @@ public class Buku extends Item {
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("==================TAMBAH BUKU==================");
-                    System.out.print("ISBN \t\t: ");
-                    isbn = input.nextLine();
-                    System.out.print("Judul \t\t: ");
-                    judul = input.nextLine();
-                    System.out.print("Penerbit \t: ");
-                    penerbit = input.nextLine();
-                    System.out.print("Tahun Terbit \t: ");
-                    tahunTerbit = input.nextInt();
-                    input.nextLine();
-                    System.out.print("Pengarang \t: ");
-                    pengarang = input.nextLine();
+                    try {
+                        System.out.println("==================TAMBAH BUKU==================");
+                        System.out.print("ISBN \t\t: ");
+                        isbn = input.nextLine();
+                        System.out.print("Judul \t\t: ");
+                        judul = input.nextLine();
+                        System.out.print("Penerbit \t: ");
+                        penerbit = input.nextLine();
+                        System.out.print("Tahun Terbit \t: ");
+                        tahunTerbit = input.nextInt();
+                        input.nextLine();
+                        System.out.print("Pengarang \t: ");
+                        pengarang = input.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Inputan tidak valid.");
+                        input.nextLine();
+                        break;
+                    }
 
                     if (!perpustakaan.checkUniqueKey(isbn, "Buku")) {
                         buku.setBuku(judul, penerbit, tahunTerbit, isbn, pengarang);
@@ -75,15 +81,21 @@ public class Buku extends Item {
                     isbn = input.nextLine();
 
                     if (perpustakaan.checkUniqueKey(isbn, "Buku")) {
-                        System.out.print("\nJudul \t\t: ");
-                        judul = input.nextLine();
-                        System.out.print("Penerbit \t: ");
-                        penerbit = input.nextLine();
-                        System.out.print("Tahun Terbit \t: ");
-                        tahunTerbit = input.nextInt();
-                        input.nextLine();
-                        System.out.print("Pengarang \t: ");
-                        pengarang = input.nextLine();
+                        try {
+                            System.out.print("\nJudul \t\t: ");
+                            judul = input.nextLine();
+                            System.out.print("Penerbit \t: ");
+                            penerbit = input.nextLine();
+                            System.out.print("Tahun Terbit \t: ");
+                            tahunTerbit = input.nextInt();
+                            input.nextLine();
+                            System.out.print("Pengarang \t: ");
+                            pengarang = input.nextLine();
+                        } catch (Exception e) {
+                            System.out.println("Inputan tidak valid.");
+                            input.nextLine();
+                            break;
+                        }
 
                         buku.setBuku(judul, penerbit, tahunTerbit, isbn, pengarang);
                         perpustakaan.updateItem(isbn, buku);
